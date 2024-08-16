@@ -133,7 +133,7 @@ error_reporting(0);
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li>
                             <a href="datauser.php">

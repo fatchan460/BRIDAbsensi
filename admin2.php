@@ -75,7 +75,7 @@
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -120,7 +120,7 @@
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -208,7 +208,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <h1>SIKaryawan</h1>
+                            <h1>AbsenNow</h1>
                           
                         </div>
                     </div>

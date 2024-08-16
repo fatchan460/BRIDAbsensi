@@ -89,7 +89,7 @@ error_reporting(0);
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiwa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -105,7 +105,7 @@ error_reporting(0);
                         </li>
                        <li>
                             <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
+                                <i class="fas fa-table"></i>Data Keterangan
                             </a>
                         </li>
                        
@@ -133,7 +133,7 @@ error_reporting(0);
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li  class="active has-sub">
                             <a href="datause.php">

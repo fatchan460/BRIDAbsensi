@@ -21,7 +21,7 @@ session_start();
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Data Karyawan</title>
+    <title>Data Mahasiswa</title>
 
     <!-- Fontfaces CSS-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all">
@@ -90,7 +90,7 @@ session_start();
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -106,7 +106,7 @@ session_start();
                         </li>
                        <li>
                             <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
+                                <i class="fas fa-table"></i>Data Keterangan
                             </a>
                         </li>
                        
@@ -134,7 +134,7 @@ session_start();
                         </li>
                           <li class="active">
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -228,7 +228,7 @@ session_start();
                         <div class="header-wrap">
                            
                              <form class="form-header" action="prospenkar.php" method="POST">
-                                <input class="au-input au-input--xl" autocomplete="off" type="text" name="cari" placeholder="Cari ID atau nama karyawan" />
+                                <input class="au-input au-input--xl" autocomplete="off" type="text" name="cari" placeholder="Cari ID atau Nama Mahasiswa" />
                                 <button class="au-btn--submit" type="submit">
                                     <i class="zmdi zmdi-search"></i>
                                 </button>
@@ -255,7 +255,7 @@ session_start();
                                         
                                         <tbody>
                                             <tr>
-                                                <td>NIP</td>
+                                                <td>NIM</td>
                                                 <td>
                                                 
                                                 <input type="text" class="form-control" maxlength="9" required="" name="id_karyawan" autocomplete="off" size="25px" maxlength="25px">    
@@ -392,16 +392,15 @@ session_start();
                                         <thead>
                                             <tr>
                                                 
-                                 <th>NIP</th>
+                                 <th>NIM</th>
                                  <th>Nama</th>
                                  <th>Tempat & tanggal lahir</th>
                                  <th class="text-right">Jenis Kelamin</th>
                                  <th class="text-right">Agama</th>
                                  <th>Alamat</th>
                                  <th>Nomor Telepon</th>
-                                 <th>Jabatan</th>
                                  <th>Foto</th>
-                                <th>Aksi</th>
+                                 <th>Aksi</th>
                                                 
                                             </tr>
                                         </thead>

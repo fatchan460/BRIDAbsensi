@@ -90,7 +90,7 @@ session_start();
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiswa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -106,7 +106,7 @@ session_start();
                         </li>
                        <li>
                             <a href="data_keterangan.php">
-                                <i class="fas fa-table"></i>data Keterangan
+                                <i class="fas fa-table"></i><Del></Del>ata Keterangan
                             </a>
                         </li>
                        
@@ -134,7 +134,7 @@ session_start();
                         </li>
                         <li>
                             <a href="datakaryawan.php">
-                                <i class="fas fa-chart-bar"></i>Data Karyawan</a>
+                                <i class="fas fa-chart-bar"></i>Data Mahasiwa</a>
                         </li>
                         <li>
                             <a href="datauser.php">
@@ -408,7 +408,7 @@ session_start();
                                         <thead>
                                             <tr>
                                 <th>no</th>   
-                                 <th>id karyawan</th>
+                                 <th>id mahasiswa</th>
                                  <th>Nama</th>
                                  <th>keterangan</th>
                                  <th class="text-right">alasan</th>
