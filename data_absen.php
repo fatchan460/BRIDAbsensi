@@ -1,5 +1,5 @@
-<?php 
-require_once("koneksi.php");
+<?php
+require_once 'koneksi.php';
 error_reporting(0);
  ?>
 <!DOCTYPE html>
@@ -51,12 +51,12 @@ error_reporting(0);
 </head>
 
 <body class="animsition">
-      <?php 
+      <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        header("location: index.php");
-    }else {
-        $username = $_SESSION['username'];  
+        header('location: index.php');
+    } else {
+        $username = $_SESSION['username'];
     }
 
  ?>
@@ -93,10 +93,6 @@ error_reporting(0);
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data user</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">
@@ -137,10 +133,6 @@ error_reporting(0);
                         <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Data User</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li class="active has-sub">
                             <a href="data_absen.php">
@@ -258,21 +250,19 @@ error_reporting(0);
                                                 
                                             </tr>
                                         </thead>
-                                        <?php 
+                                        <?php
                                             include 'koneksi.php';
-                                            $sql = "SELECT * FROM tb_absen";
+                                            $sql = 'SELECT * FROM tb_absen';
                                             $query = mysqli_query($koneksi, $sql);
 
                                             $no = 1;
                                             while ($row = mysqli_fetch_array($query)) {
-                                                
-                                            
-                                         ?>
+                                                ?>
                                         <tbody>
                                             <tr>
-                                                <td><?php echo $no ?></td>
+                                                <td><?php echo $no; ?></td>
                                                 <td><?php echo $row['id_karyawan']; ?></td>
-                                                <td><?php echo $row ['nama']; ?></td>
+                                                <td><?php echo $row['nama']; ?></td>
                                                 <td><?php echo $row['waktu']; ?></td>
                                                 
                                                     
@@ -283,9 +273,9 @@ error_reporting(0);
 
                                                 
                                             </tr>
-                                           <?php 
-                                           $no++;
-                                       }
+                                           <?php
+                                           ++$no;
+                                            }
 
                                             ?>
                                         </tbody>

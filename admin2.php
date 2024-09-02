@@ -37,12 +37,12 @@
 </head>
 
 <body class="animsition">
-    <?php 
+    <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        header("location: index.php");
-    }else {
-        $username = $_SESSION['username'];  
+        header('location: index.php');
+    } else {
+        $username = $_SESSION['username'];
     }
 
  ?>
@@ -80,10 +80,6 @@
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data user</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">
@@ -125,10 +121,6 @@
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data User</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">

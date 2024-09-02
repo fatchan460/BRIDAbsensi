@@ -66,30 +66,6 @@ INSERT INTO `tb_daftar` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jabatan`
---
-
-CREATE TABLE `tb_jabatan` (
-  `id` int(11) NOT NULL,
-  `jabatan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tb_jabatan`
---
-
-INSERT INTO `tb_jabatan` (`id`, `jabatan`) VALUES
-(3, 'CEO'),
-(4, 'CTO'),
-(5, 'CFO'),
-(6, 'WP Pemasaran'),
-(7, 'CMO'),
-(8, 'COO'),
-(9, 'Office Boy');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tb_karyawan`
 --
 
@@ -103,7 +79,6 @@ CREATE TABLE `tb_karyawan` (
   `agama` varchar(255) NOT NULL,
   `alamat` text NOT NULL,
   `no_tel` varchar(18) NOT NULL,
-  `jabatan` varchar(255) NOT NULL,
   `foto` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -111,11 +86,11 @@ CREATE TABLE `tb_karyawan` (
 -- Dumping data for table `tb_karyawan`
 --
 
-INSERT INTO `tb_karyawan` (`id_karyawan`, `username`, `password`, `nama`, `tmp_tgl_lahir`, `jenkel`, `agama`, `alamat`, `no_tel`, `jabatan`, `foto`) VALUES
-(9, 'Abdul', 'd41d8cd98f00b204e9800998ecf8427e', 'Abdul Muhlisin Sudirman', 'Klaten / 19-09-1994', 'Laki-laki', 'Islam', 'China', '0895635721923', 'CEO', '21092020072509employee1.png'),
-(192, 'sarah', '9e9d7a08e048e9d604b79460b54969c3', 'Sarah Mutia', 'Cianjur / 10-12-1992', 'Perempuan', 'Islam', '', '08128384848', 'CEO', '10092020025112employee3.png'),
-(999999999, 'bagas', 'ee776a18253721efe8a62e4abd29dc47', 'bagas a', 'Jakarta / 10-01-1990', 'Laki-laki', 'Islam', 'Jakarta', '0895628383333', 'Office Boy', '10092020024120employee3.png'),
-(1920392912, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Budi Sanjaya', 'Bekasi / 10-12-1980', 'Laki-laki', 'Kristen', '', '0895254859994', 'CEO', '10092020023942employee1.png');
+INSERT INTO `tb_karyawan` (`id_karyawan`, `username`, `password`, `nama`, `tmp_tgl_lahir`, `jenkel`, `agama`, `alamat`, `no_tel`, `foto`) VALUES
+(9, 'Abdul', 'd41d8cd98f00b204e9800998ecf8427e', 'Abdul Muhlisin Sudirman', 'Klaten / 19-09-1994', 'Laki-laki', 'Islam', 'China', '0895635721923', '21092020072509employee1.png'),
+(192, 'sarah', '9e9d7a08e048e9d604b79460b54969c3', 'Sarah Mutia', 'Cianjur / 10-12-1992', 'Perempuan', 'Islam', '', '08128384848', '10092020025112employee3.png'),
+(999999999, 'bagas', 'ee776a18253721efe8a62e4abd29dc47', 'bagas a', 'Jakarta / 10-01-1990', 'Laki-laki', 'Islam', 'Jakarta', '0895628383333', '10092020024120employee3.png'),
+(1920392912, 'user', 'ee11cbb19052e40b07aac0ca060c23ee', 'Budi Sanjaya', 'Bekasi / 10-12-1980', 'Laki-laki', 'Kristen', '', '0895254859994', '10092020023942employee1.png');
 
 -- --------------------------------------------------------
 
@@ -158,12 +133,6 @@ ALTER TABLE `tb_daftar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_jabatan`
---
-ALTER TABLE `tb_jabatan`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `tb_karyawan`
 --
 ALTER TABLE `tb_karyawan`
@@ -190,12 +159,6 @@ ALTER TABLE `tb_absen`
 --
 ALTER TABLE `tb_daftar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `tb_jabatan`
---
-ALTER TABLE `tb_jabatan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_keterangan`

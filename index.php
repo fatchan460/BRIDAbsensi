@@ -1,6 +1,6 @@
   <?php
 session_start();
-include ("koneksi.php");
+include 'koneksi.php';
 
  ?>
 
@@ -30,7 +30,7 @@ include ("koneksi.php");
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container box_1620">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/" alt=""></a>
+          <a class="navbar-brand logo_h" href="#"><img src="img/" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -39,7 +39,7 @@ include ("koneksi.php");
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav justify-content-end">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+              <li class="nav-item active"><a class="nav-link" href="#">Home</a></li> 
               <li class="nav-item"><a class="nav-link" href="#login" rel="page-scroll">Login</a></li> 
            
               
@@ -69,7 +69,7 @@ include ("koneksi.php");
           <div class="col-lg-5 pt-5">
             <div class="hero-banner__content">
               <h1>Tentang Website Ini</h1>
-              <p>Website ini berfungsi sebagai absensi karyawan dan sebagai sistem informasi karyawan.</p>
+              <p>Website ini berfungsi sebagai absensi mahasiswa dan sebagai sistem informasi mahasiswa.</p>
             </div>
           </div>
         </div>
@@ -92,8 +92,8 @@ include ("koneksi.php");
                 <span class="card-feature__icon">
                  
                 </span>
-                <h3 class="card-feature__title">Facebook</h3>
-                <p class="card-feature__subtitle">Bayu Tutor </p>
+                <h3 class="card-feature__title">Location</h3>
+                <p class="card-feature__subtitle">Gedung Pandanaran Lantai 1 <br>Jl. Pemuda No.175, Sekayu, <br>Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50132</p>
               </div>
             </div>
             <div class="col-lg-4">
@@ -101,8 +101,8 @@ include ("koneksi.php");
                 <span class="card-feature__icon">
                   
                 </span>
-                <h3 class="card-feature__title">Whatsapp</h3>
-                <p class="card-feature__subtitle">089531518231</p>
+                <h3 class="card-feature__title">Phone</h3>
+                <p class="card-feature__subtitle">(024) 3584037</p>
               </div>
             </div>
             <div class="col-lg-4">
@@ -110,8 +110,8 @@ include ("koneksi.php");
                 <span class="card-feature__icon">
                 
                 </span>
-                <h3 class="card-feature__title">Youtube</h3>
-                <p class="card-feature__subtitle">Bayu Tutor</p>
+                <h3 class="card-feature__title">Email</h3>
+                <p class="card-feature__subtitle">brida@semarangkota.go.id</p>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ include ("koneksi.php");
         <ul class="list-inline" id="chart-skill">
           <li><a href="login.php" target="_blank"><button class="btn btn-warning" style="size: 50px;">Login Admin</button></a>
           </li><br>
-          <li><a href="karyawan/login_karyawan.php" target="_blank"><button class="btn btn-primary" style="size: 50px;">Login Karyawan</button></a>
+          <li><a href="karyawan/login_karyawan.php" target="_blank"><button class="btn btn-primary" style="size: 50px;">Login Mahasiswa</button></a>
           </li>
           
         </ul>
@@ -170,14 +170,14 @@ include ("koneksi.php");
 			</div>
 			<div class="footer-bottom row align-items-center text-center text-lg-left">
 				<p class="footer-text m-0 col-lg-8 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Bayu Tutor</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="https://colorlib.com" target="_blank">BRIDA Kota Semarang</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-				<div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+				<!-- <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
 					<a href="https://www.facebook.com/zibran.vitadiyatama.7/" target="_blank"><i class="fab fa-facebook-f"></i></a>
 					<a href="https://github.com/ZibranovSky" target="_blank"><i class="fab fa-github"></i></a>
 					<a href="https://www.linkedin.com/in/muhammad-zibran-fitadiyatama-6550801a9/" target="_blank" ><i class="fab fa-linkedin" target="_blank"></i></a>
 					
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</footer>

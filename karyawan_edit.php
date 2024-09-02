@@ -1,17 +1,15 @@
-<?php 
-require_once("koneksi.php");
+<?php
+require_once 'koneksi.php';
 error_reporting(0);
 session_start();
  ?>
  
-<?php 
-	include 'koneksi.php';
-	$id = $_GET['id_karyawan'];
-	$data = mysqli_query($koneksi, "SELECT * FROM tb_karyawan WHERE id_karyawan = '$id'");
+<?php
+    include 'koneksi.php';
+    $id = $_GET['id_karyawan'];
+    $data = mysqli_query($koneksi, "SELECT * FROM tb_karyawan WHERE id_karyawan = '$id'");
     while ($d = mysqli_fetch_array($data)) {
-      
-    
- ?>
+        ?>
 
 <!DOCTYPE html>
 <html>
@@ -65,12 +63,12 @@ session_start();
 <form action="proedit_karyawan.php" method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="exampleInputEmail1">NIP</label>
-  <input type="text" class="form-control" readonly="" name="id_karyawan" autocomplete="off" value="<?php echo $d['id_karyawan'];?>">
+  <input type="text" class="form-control" readonly="" name="id_karyawan" autocomplete="off" value="<?php echo $d['id_karyawan']; ?>">
     
   </div>
   <div class="form-group">
     <label for="exampleInputEmail1">username</label>
-  <input type="text" class="form-control" name="username" autocomplete="off" value="<?php echo $d['username'];?>">
+  <input type="text" class="form-control" name="username" autocomplete="off" value="<?php echo $d['username']; ?>">
     
   </div>
   <div class="form-group">
@@ -81,11 +79,11 @@ session_start();
 
   <div class="form-group">
     <label for="exampleInputPassword1">Nama</label>
-    <input type="text" class="form-control" name="nama" autocomplete="off" value="<?php echo $d['nama'];?>">
+    <input type="text" class="form-control" name="nama" autocomplete="off" value="<?php echo $d['nama']; ?>">
   </div>
     <div class="form-group">
     <label for="exampleInputPassword1">Tempat dan Tanggal Lahir</label>
-    <input type="text" class="form-control" name="tmp_tgl_lahir" autocomplete="off" value="<?php echo $d['tmp_tgl_lahir'];?>">
+    <input type="text" class="form-control" name="tmp_tgl_lahir" autocomplete="off" value="<?php echo $d['tmp_tgl_lahir']; ?>">
   </div>
     <div class="form-group">
     <label for="exampleInputPassword1">Jenis Kelamin</label>
@@ -109,46 +107,21 @@ session_start();
   </div>
     <div class="form-group">
     <label for="exampleInputPassword1">Alamat</label>
-    <textarea autocomplete="off" class="form-control" name="alamat" value="<?php echo $d['alamat'];?>"></textarea>
+    <textarea autocomplete="off" class="form-control" name="alamat" value="<?php echo $d['alamat']; ?>"></textarea>
   
   </div>
     <div class="form-group">
     <label for="exampleInputPassword1">Telepon</label>
-   <input type="text" class="form-control"  name="no_tel" value="<?php echo $d['no_tel'];?>">
+   <input type="text" class="form-control"  name="no_tel" value="<?php echo $d['no_tel']; ?>">
   </div>
-    <div class="form-group">
-    <label for="exampleInputPassword1">Jabatan</label>
-                                                <select class="form-control" name="jabatan">
-                                                <?php 
-
-                                                include 'koneksi.php';
-
-                                                $sql = "SELECT * FROM tb_jabatan";
-
-                                                $hasil = mysqli_query($koneksi, $sql);
-
-                                                $no = 0;
-
-                                                while ($data = mysqli_fetch_array($hasil)) {
-                                                    
-                                                $no++;
-                                                
-
-                                                 ?>
-                                                <option value="<?php echo $data['jabatan'];?>"><?php echo $data['jabatan']; ?></option>
-                                                <?php } ?>
-                                                   
-                                                </select>
  <div class="form-group">
     <label for="exampleInputPassword1">Foto</label><br>
-  <?php 
-            if ($d['foto']!=''){
-                          echo "<img src=\"images/$d[foto]\" height=150 />";  
-                        }
-                        else{
-                          echo "tidak ada gambar";
-                        }
-   ?>
+  <?php
+            if ($d['foto'] != '') {
+                echo "<img src=\"images/$d[foto]\" height=150 />";
+            } else {
+                echo 'tidak ada gambar';
+            } ?>
   </div>
 
   <div class="form-group">
@@ -163,4 +136,5 @@ session_start();
 </body>
 </html>
 
-<?php } ?>
+<?php
+    } ?>

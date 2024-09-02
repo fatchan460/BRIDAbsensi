@@ -252,11 +252,6 @@ error_reporting(0);
                                            </tr>
 
                                            <tr>
-                                           	<td>Jabatan</td>
-                                           	<td><?php echo $r['jabatan'];?> </td>
-                                           </tr>
-
-                                           <tr>
                                            	<td>Foto</td>
                                            	<td><img src="../images/<?php echo $r['foto'];?>" style="width: 128px;height: 128px;"></td>
                                            </tr>

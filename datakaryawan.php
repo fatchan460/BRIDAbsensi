@@ -1,6 +1,6 @@
 <?php
-error_reporting(0); 
-require_once("koneksi.php");
+error_reporting(0);
+require_once 'koneksi.php';
 session_start();
  ?>
 <!DOCTYPE html>
@@ -52,12 +52,12 @@ session_start();
 </head>
 
 <body class="animsition">
-      <?php 
+      <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        header("location: index.php");
-    }else {
-        $username = $_SESSION['username'];  
+        header('location: index.php');
+    } else {
+        $username = $_SESSION['username'];
     }
 
  ?>
@@ -95,10 +95,6 @@ session_start();
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data user</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">
@@ -139,10 +135,6 @@ session_start();
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data User</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">
@@ -322,32 +314,6 @@ session_start();
                                                 <td><input type="text" autocomplete="off" maxlength="18" required="" class="form-control" name="no_tel"></td>
                                             </tr>
                                             <tr>
-                                                <td>Jabatan</td>
-                                                <td>
-                                                <select class="form-control" name="jabatan" required="">
-                                                <?php 
-
-                                                include 'koneksi.php';
-
-                                                $sql = "SELECT * FROM tb_jabatan";
-
-                                                $hasil = mysqli_query($koneksi, $sql);
-
-                                                
-
-                                                while ($data = mysqli_fetch_array($hasil)) {
-                                                    
-                                                
-                                                
-
-                                                 ?>
-                                                <option value="<?php echo $data['jabatan'];?>"><?php echo $data['jabatan']; ?></option>
-                                                <?php } ?>
-                                                   
-                                                </select>
-                                            </td>
-                                            </tr>
-                                            <tr>
                                                 <td>Foto</td>
                                                 <td><input type="file" name="foto" required=""></td>
                                             </tr>
@@ -364,9 +330,9 @@ session_start();
                                     
                                 </div>    
                         </div>
-                        <?php 
+                        <?php
                         include 'koneksi.php';
-                        $query1 = "SELECT * FROM tb_karyawan ORDER BY id_karyawan";
+                        $query1 = 'SELECT * FROM tb_karyawan ORDER BY id_karyawan';
 
                         $pola = 'asc';
                         $polabaru = 'asc';
@@ -375,14 +341,13 @@ session_start();
                             $orderby = $_GET['orderby'];
                             $pola = $_GET['pola'];
 
-                        $query1 = "SELECT * FROM tb_karyawan ORDER BY $orderby $pola";
-                        mysqli_query($koneksi, $query1);
-                        if ($pola=='asc') {
-                            $polabaru = 'desc';
-                        }else{
-                            $polabaru = 'asc';
-                        }
-
+                            $query1 = "SELECT * FROM tb_karyawan ORDER BY $orderby $pola";
+                            mysqli_query($koneksi, $query1);
+                            if ($pola == 'asc') {
+                                $polabaru = 'desc';
+                            } else {
+                                $polabaru = 'asc';
+                            }
                         }
                          ?>
                         <div class="row">
@@ -404,18 +369,15 @@ session_start();
                                                 
                                             </tr>
                                         </thead>
-                                        <?php 
-                                            
+                                        <?php
 
                                             $no = 1;
-                                          
-                                                
-                                            
+
                                          ?>
                                         <tbody>
                                            
-                                           <?php 
-                                           $no++;
+                                           <?php
+                                           ++$no;
                                             include 'paging.php';
 
                                             ?>
@@ -426,17 +388,21 @@ session_start();
                             </div>
                             <ul class="pagination justify-content-center">
                 <li class="page-item">
-                    <a class="page-link" <?php if($halaman > 1){ echo "href='?halaman=$Previous'"; } ?>>Previous</a>
+                    <a class="page-link" <?php if ($halaman > 1) {
+                                                echo "href='?halaman=$Previous'";
+                                            } ?>>Previous</a>
                 </li>
-                <?php 
-                for($x=1;$x<=$total_halaman;$x++){
+                <?php
+                for ($x = 1; $x <= $total_halaman; ++$x) {
                     ?> 
-                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+                    <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x; ?>"><?php echo $x; ?></a></li>
                     <?php
                 }
                 ?>              
                 <li class="page-item">
-                    <a  class="page-link" <?php if($halaman < $total_halaman) { echo "href='?halaman=$next'"; } ?>>Next</a>
+                    <a  class="page-link" <?php if ($halaman < $total_halaman) {
+                    echo "href='?halaman=$next'";
+                } ?>>Next</a>
                 </li>
             </ul>
         

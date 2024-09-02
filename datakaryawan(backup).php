@@ -1,6 +1,6 @@
 <?php
-error_reporting(0); 
-require_once("koneksi.php");
+error_reporting(0);
+require_once 'koneksi.php';
 session_start();
  ?>
 <!DOCTYPE html>
@@ -52,12 +52,12 @@ session_start();
 </head>
 
 <body class="animsition">
-      <?php 
+      <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        header("location: index.php");
-    }else {
-        $username = $_SESSION['username'];  
+        header('location: index.php');
+    } else {
+        $username = $_SESSION['username'];
     }
 
  ?>
@@ -201,10 +201,6 @@ session_start();
                         <li>
                             <a href="table.html">
                                 <i class="fas fa-table"></i>Data User</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="calendar.html">
@@ -533,32 +529,6 @@ session_start();
                                                 <td><input type="text" autocomplete="off" class="form-control" name="no_tel"></td>
                                             </tr>
                                             <tr>
-                                                <td>Jabatan</td>
-                                                <td>
-                                                <select class="form-control" name="jabatan">
-                                                <?php 
-
-                                                include 'koneksi.php';
-
-                                                $sql = "SELECT * FROM tb_jabatan";
-
-                                                $hasil = mysqli_query($koneksi, $sql);
-
-                                                $no = 0;
-
-                                                while ($data = mysqli_fetch_array($hasil)) {
-                                                    
-                                                $no++;
-                                                
-
-                                                 ?>
-                                                <option value="<?php echo $data['jabatan'];?>"><?php echo $data['jabatan']; ?></option>
-                                                <?php } ?>
-                                                   
-                                                </select>
-                                            </td>
-                                            </tr>
-                                            <tr>
                                                 <td>FOTO</td>
                                                 <td><input type="file" name="foto"></td>
                                             </tr>
@@ -590,25 +560,22 @@ session_start();
                                                 <th class="text-right">Agama</th>
                                                 <th>Alamat</th>
                                                 <th>Nomor Telepon</th>
-                                                <th>Jabatan</th>
                                                 <th>Foto</th>
                                                 <th>Aksi</th>
                                                 
                                             </tr>
                                         </thead>
-                                        <?php 
+                                        <?php
                                             include 'koneksi.php';
-                                            $sql = "SELECT * FROM tb_karyawan";
+                                            $sql = 'SELECT * FROM tb_karyawan';
                                             $query = mysqli_query($koneksi, $sql);
 
                                             $no = 1;
                                             while ($row = mysqli_fetch_array($query)) {
-                                                
-                                            
-                                         ?>
+                                                ?>
                                         <tbody>
                                             <tr>
-                                                <td><?php echo $no ?></td>
+                                                <td><?php echo $no; ?></td>
                                                 <td><?php echo $row['id_karyawan']; ?></td>
                                                 <td><?php echo $row['nama']; ?></td>
                                                 <td><?php echo $row['tmp_tgl_lahir']; ?></td>
@@ -616,17 +583,14 @@ session_start();
                                                 <td><?php echo $row['agama']; ?></td>
                                                 <td><?php echo $row['alamat']; ?></td>
                                                 <td><?php echo $row['no_tel']; ?></td>
-                                                <td><?php echo $row['jabatan']; ?></td>
                                                 <td>
-                                                    <?php 
+                                                    <?php
 
-                                                    if ($row['foto']!='') {
+                                                    if ($row['foto'] != '') {
                                                         echo "<img src=\" images/$row[foto]\" />";
-                                                    }else{
-                                                        echo "images";
-                                                    }
-
-                                                     ?>
+                                                    } else {
+                                                        echo 'images';
+                                                    } ?>
                                                     
 
                                                 </td>
@@ -635,9 +599,9 @@ session_start();
 
                                                 
                                             </tr>
-                                           <?php 
-                                           $no++;
-                                       }
+                                           <?php
+                                           ++$no;
+                                            }
 
                                             ?>
                                         </tbody>

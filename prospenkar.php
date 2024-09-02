@@ -1,6 +1,6 @@
 <?php
-error_reporting(0); 
-require_once("koneksi.php");
+error_reporting(0);
+require_once 'koneksi.php';
 session_start();
  ?>
 <!DOCTYPE html>
@@ -52,12 +52,12 @@ session_start();
 </head>
 
 <body class="animsition">
-      <?php 
+      <?php
     session_start();
     if (!isset($_SESSION['username'])) {
-        header("location: index.php");
-    }else {
-        $username = $_SESSION['username'];  
+        header('location: index.php');
+    } else {
+        $username = $_SESSION['username'];
     }
 
  ?>
@@ -95,10 +95,6 @@ session_start();
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data user</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">
@@ -139,10 +135,6 @@ session_start();
                         <li>
                             <a href="datauser.php">
                                 <i class="fas fa-table"></i>Data User</a>
-                        </li>
-                        <li>
-                            <a href="datajabatan.php">
-                                <i class="far fa-check-square"></i>Data Jabatan</a>
                         </li>
                         <li>
                             <a href="data_absen.php">
@@ -265,7 +257,6 @@ session_start();
                                                 <th class="text-right">Agama</th>
                                                 <th>Alamat</th>
                                                 <th>Nomor Telepon</th>
-                                                <th>Jabatan</th>
                                                 <th>Foto</th>
                                                 <th>Aksi</th>
                                                 
@@ -274,7 +265,7 @@ session_start();
 
                                            
                                         <tbody>
-                                            <?php 
+                                            <?php
                                             $cari = $_POST['cari'];
                                             $sql = "SELECT * FROM tb_karyawan WHERE id_karyawan LIKE '%$cari%' OR nama LIKE '%$cari%'";
                                             $query = mysqli_query($koneksi, $sql);
@@ -282,11 +273,9 @@ session_start();
                                             $no = 1;
 
                                             while ($row = mysqli_fetch_array($query)) {
-                                                # code...
-                                            
-                                             ?>
+                                                // code...?>
                                             <tr>
-                                                <td><?php echo $no ?></td>
+                                                <td><?php echo $no; ?></td>
                                                 <td><?php echo $row['id_karyawan']; ?></td>
                                                 <td><?php echo $row['nama']; ?></td>
                                                 <td><?php echo $row['tmp_tgl_lahir']; ?></td>
@@ -294,17 +283,14 @@ session_start();
                                                 <td><?php echo $row['agama']; ?></td>
                                                 <td><?php echo $row['alamat']; ?></td>
                                                 <td><?php echo $row['no_tel']; ?></td>
-                                                <td><?php echo $row['jabatan']; ?></td>
                                                 <td>
-                                                    <?php 
+                                                    <?php
 
-                                                    if ($row['foto']!='') {
+                                                    if ($row['foto'] != '') {
                                                         echo "<img src=\" images/$row[foto]\" />";
-                                                    }else{
-                                                        echo "images";
-                                                    }
-
-                                                     ?>
+                                                    } else {
+                                                        echo 'images';
+                                                    } ?>
                                                     
 
                                                 </td>
@@ -313,9 +299,9 @@ session_start();
 
                                                 
                                             </tr>
-                                           <?php 
-                                           $no++;
-                                       }
+                                           <?php
+                                           ++$no;
+                                            }
 
                                             ?>
                                         </tbody>

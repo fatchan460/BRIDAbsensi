@@ -1,4 +1,4 @@
-<?php 
+<?php
 error_reporting(0);
 
  ?>
@@ -124,7 +124,7 @@ error_reporting(0);
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="../images/<?php echo $r['foto'];?>" class="img-circle" alt="<?php echo $r['nama'];?>" />
+                                            <img src="../images/<?php echo $r['foto']; ?>" class="img-circle" alt="<?php echo $r['nama']; ?>" />
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#"><?php echo $r['nama']; ?></a>
@@ -133,7 +133,7 @@ error_reporting(0);
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                         <img src="../images/<?php echo $r['foto'];?>" class="img-circle" \ />
+                                                         <img src="../images/<?php echo $r['foto']; ?>" class="img-circle" \ />
                                                     </a>
                                                 </div>
                                                 <div class="content">
@@ -194,13 +194,13 @@ error_reporting(0);
                                 <div class="form-group">
                                 	
                                 	<?php
-                                	$id = $_SESSION['idsi'];
-                                	include 'koneksi.php';
-                                	$sql = "SELECT * FROM tb_karyawan WHERE id_karyawan = '$id'";
-                                	$query = mysqli_query($koneksi, $sql);
-                                	$r = mysqli_fetch_array($query);
+                                    $id = $_SESSION['idsi'];
+                                    include 'koneksi.php';
+                                    $sql = "SELECT * FROM tb_karyawan WHERE id_karyawan = '$id'";
+                                    $query = mysqli_query($koneksi, $sql);
+                                    $r = mysqli_fetch_array($query);
 
-                                	 ?>
+                                     ?>
 
                                 <table class="table table-borderless table-striped table-earning" >
                                         
@@ -209,7 +209,7 @@ error_reporting(0);
                                             <tr>
                                                 <td>NIP</td>
                                                 <td>
-                                                	<input type="text" value="<?php echo $r['id_karyawan'];?>" name="id_karyawan">
+                                                	<input type="text" value="<?php echo $r['id_karyawan']; ?>" name="id_karyawan">
                                                 
                                                 
                                                 
@@ -219,14 +219,14 @@ error_reporting(0);
                                             <tr>
                                                 <td>Nama</td>
                                                 <td>
-                                                	<input type="text" name="nama" value="<?php echo $r['nama'];?>">
+                                                	<input type="text" name="nama" value="<?php echo $r['nama']; ?>">
                                                 	</td>
                                             </tr>
                                          
                                             <tr>
                                                 <td>Username</td>
                                                 <td>
-                                                	<input type="text" name="username" value="<?php echo $r['username'];?>">
+                                                	<input type="text" name="username" value="<?php echo $r['username']; ?>">
                                                 	</td>
                                             </tr>
 
@@ -243,7 +243,7 @@ error_reporting(0);
                                             <tr>
                                             	<td>Tempat & tanggal lahir</td>
                                             	<td>
-                                            		<input type="text" value="<?php echo $r['tmp_tgl_lahir'];?>" name="tmp_tgl_lahir">
+                                            		<input type="text" value="<?php echo $r['tmp_tgl_lahir']; ?>" name="tmp_tgl_lahir">
                                             		</td>
                                             </tr>
 
@@ -275,46 +275,18 @@ error_reporting(0);
 
                                            <tr>
                                               <td>Alamat</td>
-                                              <td><input type="text" name="alamat" value="<?php echo $r['alamat'];?>"></td>
+                                              <td><input type="text" name="alamat" value="<?php echo $r['alamat']; ?>"></td>
                                            </tr>
 
                                            <tr>
                                            	<td>Nomor telepon</td>
                                            	<td>
-                                           		<input type="text" name="no_tel" value="<?php echo $r['no_tel'];?>">
+                                           		<input type="text" name="no_tel" value="<?php echo $r['no_tel']; ?>">
                                            		</td>
                                            </tr>
-
-                                           <tr>
-                                           	<td>Jabatan</td>
-                                           	<td>
-                                           		<select class="form-control" name="jabatan">
-                                                <?php 
-
-                                                include 'koneksi.php';
-
-                                                $sql = "SELECT * FROM tb_jabatan";
-
-                                                $hasil = mysqli_query($koneksi, $sql);
-
-                                               
-
-                                                while ($data = mysqli_fetch_array($hasil)) {
-                                                    
-                                               
-                                                
-
-                                                 ?>
-                                                <option value="<?php echo $data['jabatan'];?>"><?php echo $data['jabatan']; ?></option>
-                                                <?php } ?>
-                                                   
-                                                </select>
-                                           		 </td>
-                                           </tr>
-
                                            <tr>
                                            	<td>Foto</td>
-                                           	<td><img src="../images/<?php echo $r['foto'];?>" style="width: 128px;height: 128px;"></td>
+                                           	<td><img src="../images/<?php echo $r['foto']; ?>" style="width: 128px;height: 128px;"></td>
                                            </tr>
 
                                            <tr>
