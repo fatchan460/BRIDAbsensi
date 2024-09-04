@@ -1,15 +1,15 @@
-# AbsenSIKaryawan
-Absensi dan Sistem Informasi Karyawan berbasis web
+# BRIDAbsensi
+Absensi dan Sistem Informasi Mahasiswa Magang di BRIDA Kota Semarang berbasis web
 
 
--> Absen Karyawan - SIKaryawan
+-> Absen Mahasiswa
 
-Absen Karyawan - Sistem informasi karyawan merupakan aplikasi absensi berbasis web, yang dibuat untuk memenuhi kebutuhan perusahaan atau instansi yang membutuhkan aplikasi absensi karyawan.
+Absen Mahasiswa - Sistem informasi mahasiswa merupakan aplikasi absensi berbasis web, yang dibuat untuk memenuhi kebutuhan BRIDA yang membutuhkan aplikasi absensi.
 
 -> Fitur - fitur aplikasi : 
 1.admin, dimana admin bisa mengontrol aplikasi, ini seperti menambahkan, melihat, mengubah atau menghapus data.
 
-2.Sistem absensi karyawan, sistem ini memungkinkan setiap karyawan melakukan absensi berdasarkan sesi nya masing - masing.  Untuk mencegah penyalahgunaan data.
+2.Sistem absensi mahasiswa, sistem ini memungkinkan setiap mahasiswa melakukan absensi berdasarkan sesi nya masing - masing.  Untuk mencegah penyalahgunaan data.
 
 -> Login default admin : 
   1. username = admin
