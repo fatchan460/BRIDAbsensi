@@ -16,7 +16,7 @@
 <body>
   <!-- main -->
   <div class="main-w3layouts wrapper">
-    <h1>Login Karyawan</h1>
+    <h1>Login Mahasiswa</h1>
     <div class="main-agileinfo">
       <div class="agileits-top">
         <form action="pro_login_karyawan.php" method="post">
